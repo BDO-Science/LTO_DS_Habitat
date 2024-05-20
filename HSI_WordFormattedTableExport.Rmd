@@ -1,0 +1,140 @@
+---
+#install officedown package before running this YAML #portion of the script
+date: "`r Sys.Date()`"
+title: "Formatted Table for copying into Attachments"
+output: 
+  officedown::rdocx_document:
+        reference_docx: C:/Users/karend/OneDrive - DOI/Documents/Current Work/DS_HSI/TableTemplate.docx
+        tables:
+          style: StyleAlpha
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+# Set working directory ----
+#set to location of root object to highest tier directory
+#root <- "C:/Users/nbertrand/Desktop/Bertrand/GitHub/OMRVolumetricInfluence"
+#setwd(root)
+
+#these root object use directories within OMRVolumetricInfluence
+#data_root<-file.path(root,"Data")
+#code_root <- file.path(root,"R_scripts")
+#output_root <- file.path(root,"Output")
+
+library(officedown)
+library(officer)
+library(readr)
+library(kableExtra)
+library(knitr)
+library(here)
+```
+
+
+
+### BA Table 1
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+BA_table_1 <- read_csv(file.path("HSI_figs_tables/HSIall_Table_BA_sd_DWR2019.csv")) 
+                
+#options(digits = 2)
+
+BA_table_1
+
+
+```
+
+### BA Table 2
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+BA_table_2 <- read_csv(file.path("HSI_figs_tables/HSIall_Table_BA_perdiff_DWR2019.csv"), 
+                col_types = cols(...1 = col_skip()))
+options(digits = 2)
+
+BA_table_2
+
+
+```
+
+
+
+### BA Table 3
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+BA_table_3 <- read_csv(file.path("HSI_figs_tables/BevHSIall_Table_BA_sd_DWR2019.csv")) 
+                
+#options(digits = 2)
+
+BA_table_3
+
+
+```
+
+### BA Table 4
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+BA_table_4 <- read_csv(file.path("HSI_figs_tables/BevHSIall_Table_BA_perdiff_DWR2019.csv"), 
+                col_types = cols(...1 = col_skip()))
+options(digits = 2)
+
+BA_table_4
+
+
+```
+### EIS Table 1
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+EIS_table_1 <- read_csv(file.path("HSI_figs_tables/HSIall_Table_EIS_sd_DWR2019.csv")) 
+                
+#options(digits = 2)
+
+EIS_table_1
+
+
+```
+
+### EIS Table 2
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+EIS_table_2 <- read_csv(file.path("HSI_figs_tables/HSIall_Table_EIS_perdiff_DWR2019.csv"), 
+                col_types = cols(...1 = col_skip()))
+options(digits = 2)
+
+EIS_table_2
+
+
+```
+
+
+
+### EIS Table 3
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+EIS_table_3 <- read_csv(file.path("HSI_figs_tables/BevHSIall_Table_EIS_sd_DWR2019.csv")) 
+                
+#options(digits = 2)
+
+EIS_table_3
+
+
+```
+
+### EIS Table 4
+
+```{r tab.cap="TableName", tab.id="Table1", echo=FALSE}
+
+EIS_table_4 <- read_csv(file.path("HSI_figs_tables/BevHSIall_Table_EIS_perdiff_DWR2019.csv"), 
+                col_types = cols(...1 = col_skip()))
+options(digits = 2)
+
+EIS_table_4
+
+
+```
