@@ -1,7 +1,7 @@
 # DS_HSI
 Summarizes Delta Smelt habitat suitability index values from SCHISM 2-week averages
 
-Scripts are designed to be run in numerical order
+Scripts are designed to be run in numerical order. The data files needed for steps 1 and 2 are too large to store on Github. Contact Josh Israel to request access to the data (jaisrael@usbr.gov).
 
 01_AppK_SCHISM_pre.R
  - Takes the SCHISM postprocessed files: biweekly environmental conditions and HSI values
